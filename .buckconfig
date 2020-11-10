@@ -4,7 +4,7 @@
   target = android-25
   build_tools_version = 26.0.2
 [ndk]
-  ndk_version = 21.0.6113669
+  ndk_version = 16.1.4479499
   compiler = clang
   app_platform = android-21
   cpu_abis = arm64, armv7, x86, x86_64

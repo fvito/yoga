@@ -1,6 +1,6 @@
 before_install:
  - yes | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;26.0.2"
- - yes | $ANDROID_HOME/tools/bin/sdkmanager "ndk;21.0.6113669"
+ - yes | $ANDROID_HOME/tools/bin/sdkmanager "ndk;16.1.4479499"
 install:
    - set -exo pipefail
    - mkdir python_tmp
