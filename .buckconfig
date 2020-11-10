@@ -8,4 +8,4 @@
   compiler = clang
   app_platform = android-21
   cpu_abis = arm64, armv7, x86, x86_64
-  ndk_path = $ANDROID_HOME/ndk/15.2.4203891
+  ndk_path = /opt/android-sdk-linux/ndk/15.2.4203891
