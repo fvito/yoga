@@ -1,16 +1,13 @@
 before_install:
- - yes | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;26.0.2"
- - yes | $ANDROID_HOME/tools/bin/sdkmanager "ndk;16.1.4479499"
- - yes | $ANDROID_HOME/tools/bin/sdkmanager "platforms;android-25"
+ - yes | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;26.0.2" "ndk;16.1.4479499" "platforms;android-25"
 install:
    - set -exo pipefail
    - mkdir python_tmp
-   - wget https://github.com/kageiit/jitpack-python/releases/download/3.8/python-3.8-ubuntu-16.tar.gz -O python_tmp/python.tar.gz
+   - wget -quiet https://github.com/kageiit/jitpack-python/releases/download/3.8/python-3.8-ubuntu-16.tar.gz -O python_tmp/python.tar.gz
    - tar -C python_tmp -xf python_tmp/python.tar.gz
    - export PATH="$PATH:python_tmp/bin"
    - echo "Downloading buck"
-   - wget jitpack.io/com/github/facebook/buck/v2020.10.21.01/buck-v2020.10.21.01.pex -O buck.pex
-   - echo $ANDROID_HOME
+   - wget -quiet jitpack.io/com/github/facebook/buck/v2020.10.21.01/buck-v2020.10.21.01.pex -O buck.pex
    - python3 buck.pex build //android
    - cp buck-out/gen/android/android.aar yoga-layout.aar
    - mvn install:install-file -Dfile="yoga-layout.aar" -DgroupId="com.github.fvito" -DartifactId="yoga" -Dversion="1.18.0" -Dpackaging="aar" -DgeneratePom=true
