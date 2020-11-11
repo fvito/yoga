@@ -10,6 +10,6 @@ install:
    - wget --quiet jitpack.io/com/github/facebook/buck/v2020.10.21.01/buck-v2020.10.21.01.pex -O buck.pex
    - python3 buck.pex build //android
    - cp buck-out/gen/android/android.aar yoga-layout.aar
-   - mvn install:install-file -Dfile="yoga-layout.aar" -DgroupId="com.github.fvito" -DartifactId="yoga" -Dversion="1.18.0" -Dpackaging="aar" -DgeneratePom=true
+   - mvn install:install-file -Dfile="yoga-layout.aar" -DgroupId="com.github.fvito" -DartifactId="yoga" -Dversion="jit-1.18.0" -Dpackaging="aar" -DgeneratePom=false
 
    
