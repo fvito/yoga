@@ -72,9 +72,11 @@ yoga_java_library(
     target = "1.7",
     visibility = ["PUBLIC"],
     deps = [
-        JSR_305_TARGET,
         PROGUARD_ANNOTATIONS_TARGET,
     ],
+    provided_deps = [
+        JSR_305_TARGET
+    ]
 )
 
 yoga_java_library(
@@ -86,10 +88,12 @@ yoga_java_library(
     deps = [
         ":java-interface",
         ":jni",
-        JSR_305_TARGET,
-        PROGUARD_ANNOTATIONS_TARGET,
-        SOLOADER_TARGET,
+        PROGUARD_ANNOTATIONS_TARGET
     ],
+    provided_deps = [
+        JSR_305_TARGET,
+        SOLOADER_TARGET
+    ]
 )
 
 yoga_java_library(
