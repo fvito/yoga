@@ -12,9 +12,10 @@ yoga_android_library(
         "PUBLIC",
     ],
     deps = [
-        ANDROID_RES_TARGET,
-        JAVA_TARGET,
-        JSR_305_TARGET,
-        SOLOADER_TARGET,
+        ANDROID_RES_TARGET
     ],
+    provided_deps = [
+        JAVA_TARGET,
+        SOLOADER_TARGET,
+    ]
 )

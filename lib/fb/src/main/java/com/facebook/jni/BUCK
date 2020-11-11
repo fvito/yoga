@@ -13,8 +13,11 @@ yoga_java_library(
         "PUBLIC",
     ],
     deps = [
-        PROGUARD_ANNOTATIONS_TARGET,
-        SOLOADER_TARGET,
-        JSR_305_TARGET,
+        PROGUARD_ANNOTATIONS_TARGET
+       
     ],
+    provided_deps = [
+        SOLOADER_TARGET,
+        JSR_305_TARGET
+    ]
 )
